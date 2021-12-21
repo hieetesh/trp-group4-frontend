@@ -19,7 +19,7 @@ const dashboardContainer = {
 
 const navBar = {
     width: "100%",
-    height: "80px",
+    height: "60px",
     border: "2px solid white",
     marginTop: "0px",
     backgroundColor: "white"
@@ -51,6 +51,40 @@ function Dashboard(props) {
 
     const [week, setWeek] = useState("week1");
     const [musicLoad, setMusicLoad] = useState("");
+    const [rewards, setRewards] = useState(0);
+
+    const [progress, setProgress] = useState({
+        "week1": {
+            "book":25,
+            "word":25,
+            "lesson":25
+        },
+        "week2": {
+            "book":100,
+            "word":75,
+            "lesson":50
+        },
+        "week3": {
+            "book":100,
+            "word":75,
+            "lesson":50
+        },
+        "week4": {
+            "book":100,
+            "word":75,
+            "lesson":50
+        },
+        "week5": {
+            "book":100,
+            "word":75,
+            "lesson":50
+        },
+        "week6": {
+            "book":100,
+            "word":75,
+            "lesson":50
+        },
+    })
     useEffect(()=>{
         console.log("play sound")
         sound.play();
@@ -65,26 +99,30 @@ function Dashboard(props) {
             <div style={dashboardContainer}>
                 <div style={navBar}>
                     <div style={logo}>
-                        <h1 style={{margin:"0px", marginTop:"15px", verticalAlign: "middle", color:"#F05454"}}>Reading</h1>
+                        {/* <h1 style={{margin:"0px", marginTop:"15px", verticalAlign: "middle", color:"#F05454"}}>Reading</h1> */}
+                        <img style={{display:"inline-block", marginLeft:"20px"}} src="/images/logohome.png" width="60px" alt="logo" />
                     </div>
 
                     <div style={profile}>
-                        <img style={{display:"inline-block", borderRadius: "50%", margin:"auto", verticalAlign: "middle",position:"relative", right:"50%"}} src={dollar} width="30px"></img>
-                        <h4 style={{display:"inline-block", margin:"0px", marginLeft:"10px", marginRight:"10px",position:"relative", right:"50%"}}>100</h4>
-                        <h5 style={{display:"inline-block", margin:"0px", marginRight:"10px",position:"relative", right:"20%"}}>Jane Doe</h5>
-                        <img style={{display:"inline-block", borderRadius: "50%", margin:"auto", verticalAlign: "middle",position:"relative", right:"20%"}} src={image1} width="30px"></img>
+                        <img style={{display:"inline-block", borderRadius: "50%", margin:"auto", verticalAlign: "middle",position:"relative", right:"60%", bottom: "50%"}} src={dollar} width="30px"></img>
+                        <h4 style={{display:"inline-block", margin:"0px", marginLeft:"10px", marginRight:"10px",position:"relative", right:"60%", bottom: "50%"}}>{rewards}</h4>
+                        <h5 style={{display:"inline-block", margin:"0px", marginRight:"10px",position:"relative", right:"20%", bottom: "50%"}}>Jane Doe</h5>
+                        <img style={{display:"inline-block", borderRadius: "50%", margin:"auto", verticalAlign: "middle",position:"relative", right:"20%", bottom: "50%"}} src={image1} width="30px"></img>
                     </div>
-
-
-
                 </div>
                 <div style={{height: "auto"}}>
                 <Timeline
                     setWeek={(value)=>setWeek(value)}
                     sound={sound}
+                    progress={progress}
+                    setProgress={(value)=>setProgress(value)}
                 />
                 <Content
                     week={week}
+                    rewards={rewards}
+                    setRewards={(value)=>setRewards(value)}
+                    progress={progress}
+                    setProgress={(value)=>setProgress(value)}
                 />
                 </div>
                 <div>
