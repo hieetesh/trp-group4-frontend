@@ -127,6 +127,127 @@ function Application(props) {
                     </tr>
                 </table>
             </div>
+{/* 
+        <div style={{backgroundColor: '#fff9c4', width:"100%", height:"auto",// border: "2px solid black",padding: "1rem",
+        textAlign: "center"}}>
+            <img style={style1} src='images/banner.png' width="800" height="170"></img>
+            <form>
+                <br/>
+                <TextField
+                    style={field}
+                    id="outlined-helperText"
+                    label="First Name"
+                    defaultValue=""
+                    InputLabelProps ={{
+                       style: { fontWeight: 'bold', color: '#f05454'}
+                       
+                    }}
+                    // helperText="Some important text"
+                />
+                <br/>
+                <TextField
+                    style={field}
+                    id="outlined-helperText"
+                    label="Last Name"
+                    defaultValue=""
+                    InputLabelProps ={{
+                        style: { fontWeight: 'bold', color: '#f05454'}
+                     }}
+                    // helperText="Some important text"
+                />
+                <br/>
+
+                <TextField
+                    style={field}
+                    id="outlined-helperText"
+                    label="Email"
+                    defaultValue=""
+                    InputLabelProps ={{
+                        style: { fontWeight: 'bold', color: '#f05454'}
+                     }}
+                    // helperText="Some important text"
+                />
+                <br/>
+
+                <TextField
+                    style={field}
+                    id="outlined-helperText"
+                    label="Address"
+                    defaultValue=""
+                    InputLabelProps ={{
+                        style: { fontWeight: 'bold', color: '#f05454'}
+                     }}
+                    // helperText="Some important text"
+                />
+                <br/>
+
+                <FormControl style={field} sx={{ m: 1, minWidth: 120 }}>
+                    <InputLabel style={{fontWeight: 'bold', color: '#f05454'}} id="demo-simple-select-helper-label">Ethnicity</InputLabel>
+                    <Select
+                    labelId="demo-simple-select-helper-label"
+                    id="demo-simple-select-helper"
+                    value={age}
+                    label="Ethnicity"
+                    onChange={handleChange}
+                    >
+                    <MenuItem value="">
+                        <em>Select</em>
+                    </MenuItem>
+                    <MenuItem value={10}>Black</MenuItem>
+                    <MenuItem value={20}>Indigenous</MenuItem>
+                    <MenuItem value={30}>Asian</MenuItem>
+                    </Select>
+                </FormControl>
+
+                <br/>
+
+                <FormControl style={field} sx={{ m: 1, minWidth: 120 }}>
+                    <InputLabel style={{fontWeight: 'bold', color: '#f05454'}} id="demo-simple-select-helper-label">Education</InputLabel>
+                    <Select
+                    labelId="demo-simple-select-helper-label"
+                    id="demo-simple-select-helper"
+                    value={age}
+                    label="Education"
+                    InputLabelProps ={{
+                        style: { fontWeight: 'bold', color: '#f05454'}
+                     }}
+                    onChange={handleChange}
+                    >
+                    <MenuItem value="">
+                        <em>Select</em>
+                    </MenuItem>
+                    <MenuItem value={10}>High School</MenuItem>
+                    <MenuItem value={20}>University</MenuItem>
+                    <MenuItem value={30}>Post Grad</MenuItem>
+                    </Select>
+                </FormControl>
+
+                <br/>
+
+                <FormControl style={field} sx={{ m: 1, minWidth: 120 }}>
+                    <InputLabel id="demo-simple-select-helper-label" style={{fontWeight: 'bold', color: '#f05454'}} >Number of Children</InputLabel>
+                    <Select
+                    labelId="demo-simple-select-helper-label"
+                    id="demo-simple-select-helper"
+                    value={age}
+                    label="Number of Children"
+                    
+                    onChange={handleChange}
+                    >
+                    <MenuItem value="">
+                        <em>Select</em>
+                    </MenuItem>
+                    <MenuItem value={10}>1</MenuItem>
+                    <MenuItem value={20}>2</MenuItem>
+                    <MenuItem value={30}>More than 2</MenuItem>
+                    </Select>
+                </FormControl>
+
+                <br/>
+
+
+                <Button style={button} variant="outlined">Submit</Button>
+            </form> */}
         </div>
     );
 }
