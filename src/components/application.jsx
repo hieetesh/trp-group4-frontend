@@ -121,6 +121,16 @@ function Application(props) {
                         </td>
                     </tr>
                     <tr>
+                        <td></td>
+                        <td>
+                        <div className="frmcol">
+                            <label className="frmlbl">Number of children</label>
+                            <img className="icon" src="/images/single_user.svg" />
+                            <input type="text" className="frmtxt size-500" />
+                        </div>
+                        </td>
+                    </tr>
+                    <tr>
                         <td colspan="2">
                             <button className="signup">Sign Up</button>
                         </td>
