@@ -63,7 +63,7 @@ function Application(props) {
                     label="First Name"
                     defaultValue=""
                     InputLabelProps ={{
-                       style: { fontWeight: 'bold'}
+                       style: { fontWeight: 'bold', color: '#f05454'}
                        
                     }}
                     // helperText="Some important text"
@@ -75,7 +75,7 @@ function Application(props) {
                     label="Last Name"
                     defaultValue=""
                     InputLabelProps ={{
-                        style: { fontWeight: 'bold'}
+                        style: { fontWeight: 'bold', color: '#f05454'}
                      }}
                     // helperText="Some important text"
                 />
@@ -87,7 +87,7 @@ function Application(props) {
                     label="Email"
                     defaultValue=""
                     InputLabelProps ={{
-                        style: { fontWeight: 'bold'}
+                        style: { fontWeight: 'bold', color: '#f05454'}
                      }}
                     // helperText="Some important text"
                 />
@@ -99,14 +99,14 @@ function Application(props) {
                     label="Address"
                     defaultValue=""
                     InputLabelProps ={{
-                        style: { fontWeight: 'bold'}
+                        style: { fontWeight: 'bold', color: '#f05454'}
                      }}
                     // helperText="Some important text"
                 />
                 <br/>
 
                 <FormControl style={field} sx={{ m: 1, minWidth: 120 }}>
-                    <InputLabel style={{fontWeight: 'bold'}} id="demo-simple-select-helper-label">Ethnicity</InputLabel>
+                    <InputLabel style={{fontWeight: 'bold', color: '#f05454'}} id="demo-simple-select-helper-label">Ethnicity</InputLabel>
                     <Select
                     labelId="demo-simple-select-helper-label"
                     id="demo-simple-select-helper"
@@ -126,14 +126,14 @@ function Application(props) {
                 <br/>
 
                 <FormControl style={field} sx={{ m: 1, minWidth: 120 }}>
-                    <InputLabel style={{fontWeight: 'bold'}} id="demo-simple-select-helper-label">Education</InputLabel>
+                    <InputLabel style={{fontWeight: 'bold', color: '#f05454'}} id="demo-simple-select-helper-label">Education</InputLabel>
                     <Select
                     labelId="demo-simple-select-helper-label"
                     id="demo-simple-select-helper"
                     value={age}
                     label="Education"
                     InputLabelProps ={{
-                        style: { fontWeight: 'bold'}
+                        style: { fontWeight: 'bold', color: '#f05454'}
                      }}
                     onChange={handleChange}
                     >
@@ -149,12 +149,12 @@ function Application(props) {
                 <br/>
 
                 <FormControl style={field} sx={{ m: 1, minWidth: 120 }}>
-                    <InputLabel id="demo-simple-select-helper-label" style={{fontWeight: 'bold'}} >Total Kids</InputLabel>
+                    <InputLabel id="demo-simple-select-helper-label" style={{fontWeight: 'bold', color: '#f05454'}} >Number of Children</InputLabel>
                     <Select
                     labelId="demo-simple-select-helper-label"
                     id="demo-simple-select-helper"
                     value={age}
-                    label="Total Kids"
+                    label="Number of Children"
                     
                     onChange={handleChange}
                     >
