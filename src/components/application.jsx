@@ -52,7 +52,7 @@ function Application(props) {
     };
 
     return (
-        <div style={{backgroundColor: '#fff9c4', width:"100%", height:"auto",// border: "2px solid black",padding: "1rem",
+        <div style={{backgroundColor: 'white', width:"100%", height:"auto",// border: "2px solid black",padding: "1rem",
         textAlign: "center"}}>
             <img style={style1} src='images/banner.png' width="800" height="170"></img>
             <form>
@@ -64,7 +64,7 @@ function Application(props) {
                     defaultValue=""
                     InputLabelProps ={{
                        style: { fontWeight: 'bold'}
-                       
+
                     }}
                     // helperText="Some important text"
                 />
@@ -155,7 +155,7 @@ function Application(props) {
                     id="demo-simple-select-helper"
                     value={age}
                     label="Total Kids"
-                    
+
                     onChange={handleChange}
                     >
                     <MenuItem value="">
@@ -170,7 +170,7 @@ function Application(props) {
                 <br/>
 
 
-                <Button style={button} variant="outlined">Submit</Button>
+                <Button style={button} variant="outlined" onClick={()=>{window.location="/login"}}>Submit</Button>
             </form>
         </div>
     );
