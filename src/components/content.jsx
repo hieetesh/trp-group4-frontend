@@ -23,12 +23,12 @@ function PaperComponent(props) {
 const contentContainer = {
     display: "inline-block",
     width: "75%",
-    height: "600px",
+    height: "710px",
     border: "10px solid black",
     backgroundColor: "white",
     borderRadius: "25px",
     marginLeft: "30px",
-    marginTop: "20px",
+    marginTop: "5px",
     marginRight: "10px",
     float:"right",
 }
@@ -37,7 +37,7 @@ const iframeStyle = {
     // float:"left",
     border: "none",
     width:"100%",
-    height: "100%"
+    height: "700px"
 }
 
 const buttonContainer = {
@@ -94,12 +94,23 @@ const selectBookToRead = (weekDay) => {
 
 }
 
+// const resizeIframe = (obj) => {
+//     console.log("resizeIframe", obj);
+//     //obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+//   }
+
 function Content(props) {
     const weekDay = props.week;
     const [open, setOpen] = React.useState(false);
 
     const handleClickOpen = () => {
         setOpen(true);
+        props.setRewards(props.rewards+100);
+        let progress = props.progress;
+        progress['week1']['book'] = 100;
+        progress['week1']['word'] = 100;
+        progress['week1']['lesson'] = 100;
+        props.setProgress(progress);
       };
 
       const handleClose = () => {
@@ -121,16 +132,16 @@ function Content(props) {
                 aria-labelledby="draggable-dialog-title"
             >
                 <DialogTitle style={{ cursor: 'move' }} id="draggable-dialog-title">
-                <h2 style={{color:"black"}}>&#127881; Congratulations</h2>
+                <h2 style={{color:"black",fontSize:"50px", fontFamily:"fantasy"}}>&#127881; Congratulations &#128522;	</h2>
                 </DialogTitle>
                 <DialogContent>
                 <DialogContentText>
-                    <h3 style={{color:"black"}}>You have earned rewards for completing this module!!!</h3>
+                    <h3 style={{color:"black", fontFamily:"fantasy"}}>Huray!! &#129321; You have earned rewards for completing this module!!!</h3>
                 </DialogContentText>
                 </DialogContent>
                 <DialogActions>
 
-                <Button style={{color:"black"}} onClick={handleClose}>Done</Button>
+                <Button style={{color:"black"}} onClick={handleClose}><b>Done</b></Button>
                 </DialogActions>
             </Dialog>
         </div>
