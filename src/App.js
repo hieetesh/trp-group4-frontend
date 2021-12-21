@@ -6,6 +6,7 @@ import Home from './components/home';
 import Login from './components/login';
 import Suggestion from './components/suggestion';
 import React from 'react';
+import Dashboard from './components/dashboard';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/discussion" element={<Discussion/>} />
           <Route exact path="/home" element={<Home/>} />
           <Route exact path="/suggestion" element={<Suggestion/>} />
+          <Route exact path="/dashboard" element={<Dashboard/>} />
           <Route path="/" element={<Login/>}/>
         </Routes>
       </Router>
