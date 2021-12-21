@@ -150,7 +150,7 @@ function Application(props) {
                     defaultValue=""
                     InputLabelProps ={{
                        style: { fontWeight: 'bold', color: '#f05454'}
-                       
+
                     }}
                     // helperText="Some important text"
                 />
@@ -241,7 +241,7 @@ function Application(props) {
                     id="demo-simple-select-helper"
                     value={age}
                     label="Number of Children"
-                    
+
                     onChange={handleChange}
                     >
                     <MenuItem value="">

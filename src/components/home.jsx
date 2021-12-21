@@ -26,22 +26,22 @@ for (i = 0; i < coll.length; i++) {
 
     return (
         <div>
-            
+
             <div class='row head'>
                 <div className="col-9 headtext">
                 <img src="/images/logohome.png" alt="logo" />
                 </div>
                 <div className="col-3 headright">
-                    <button class="button headbtn">Login</button>
+                    <button class="button headbtn" onClick={()=>{window.location="/login"}}>Login</button>
                 </div>
             </div>
 
             <div className="row">
                 <div className="col-12 headhomesec">
                 <h3>"Today a reader, tomorrow a leader" - Margaret Fuller</h3>
-                <button class="button headhomebtn">Register Now</button>
+                <button class="button headhomebtn" onClick={()=>{window.location="/application"}}>Register Now</button>
                 </div>
-            
+
             </div>
 
             <div className="div">
@@ -49,22 +49,22 @@ for (i = 0; i < coll.length; i++) {
                 <div className="row imgcontainer">
 
                     <div className="col-4 imgsec">
-                        <img src="/images/imgcontaner1.png" alt="img1" />   
+                        <img src="/images/imgcontaner1.png" alt="img1" />
                     </div>
 
                     <div className="col-4 imgsec">
                         <img src="/images/imgcontaner2.png" alt="img2" />
-                    
+
                     </div>
 
                     <div className="col-4 imgsec">
                         <img src="/images/imgcontaner3.png" alt="img3" />
-                        
+
                     </div>
 
                 </div>
 
-            
+
 
                 <div className="row imgtext">
                     <div className="col-4 imgdesc">
@@ -74,7 +74,7 @@ for (i = 0; i < coll.length; i++) {
                             <p>At the beach</p>
                             <p>In the Tub</p>
                             <p>Tasha goes to school</p>
-                            <p>To the Moon</p>   
+                            <p>To the Moon</p>
                         </div>
                     </div>
                     <div className="col-4 imgdesc">
@@ -85,7 +85,7 @@ for (i = 0; i < coll.length; i++) {
                         <p>lesson-2-letter-sound</p>
                         <p>sight-words-lesson-1</p>
                         <p>sound-words-1</p>
-                        <p>sound-words-2</p> 
+                        <p>sound-words-2</p>
                         </div>
                     </div>
                     <div className="col-4 imgdesc">
@@ -124,7 +124,7 @@ for (i = 0; i < coll.length; i++) {
             </div>
 
 
-           
+
             <div className="row steps step1">
                 <a id="step1">
                 <div className="div">
@@ -189,15 +189,15 @@ for (i = 0; i < coll.length; i++) {
             <p>&copy; 2021 | Team 4 | All Rights Reserved</p>
             </div>
 
- 
 
-            
+
+
 
             </div>
-            
 
 
-    
+
+
     );
 
 }
