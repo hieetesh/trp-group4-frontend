@@ -12,8 +12,8 @@ function Application(props) {
         <div style={style1}>
             <h3 className="heading"> Reading </h3>
 
-            <button className="back">Go Back</button>
-            
+            <button className="back" onClick={()=>{window.location="/home"}}>Go Back</button>
+
             <div className="registerbox">
             <label className="lblmainsignup">Sign Up</label>
                 <table>
@@ -132,12 +132,12 @@ function Application(props) {
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <button className="signup">Sign Up</button>
+                            <button className="signup" onClick={()=>{window.location="/login"}}>Sign Up</button>
                         </td>
                     </tr>
                 </table>
             </div>
-{/* 
+{/*
         <div style={{backgroundColor: '#fff9c4', width:"100%", height:"auto",// border: "2px solid black",padding: "1rem",
         textAlign: "center"}}>
             <img style={style1} src='images/banner.png' width="800" height="170"></img>

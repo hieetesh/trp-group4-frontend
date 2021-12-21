@@ -6,12 +6,12 @@ function login(props) {
         marginLeft: 220,
         marginRight: 220
     };
-    
+
     return (
         <div style={style1}>
             <h3 className="heading"> Reading </h3>
 
-            <button className="back">Go Back</button>
+            <button className="back" onClick={()=>{window.location="/home"}}>Go Back</button>
             <div className="loginbox">
             <label className="lbllogin">Login</label>
             <br/>
@@ -28,7 +28,7 @@ function login(props) {
             <a href="" className="lblForgot">Forgot Password?</a>
             <br/>
 
-            <button className="login">Login</button>
+            <button className="login" onClick={()=>{window.location="/dashboard"}}>Login</button>
             <br/>
             <label className="lblsignup">Haven't you Sign Up?</label>
             <span className="show"><a className="lblsignuplink" href="/signup">Sign Up</a></span>
