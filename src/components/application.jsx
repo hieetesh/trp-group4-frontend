@@ -7,26 +7,39 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { lightBlue, yellow } from '@mui/material/colors';
+import { ClassNames } from '@emotion/react';
+
 
 const container = {
     width:"100%",
     height:"auto",
-    // border: "2px solid black",
+    //border: "2px solid black",
     padding: "1rem",
     textAlign: "center",
+    backgroundColor: "yellow",
 };
 
 const field = {
     // display: "block",
-    textAlign: "center",
+    textAlign: "left",
     margin: "10px auto",
+    width: 700
+
 }
 
 const button = {
     display: "block",
     textAlign: "center",
     margin: "20px auto",
+    fontWeight: 'bold'
 }
+
+const style1={
+    marginLeft: 220,
+    marginRight: 220
+};
+
 
 
 
@@ -39,13 +52,20 @@ function Application(props) {
     };
 
     return (
-        <div style={container}>
+        <div style={{backgroundColor: '#fff9c4', width:"100%", height:"auto",// border: "2px solid black",padding: "1rem",
+        textAlign: "center"}}>
+            <img style={style1} src='images/banner.png' width="800" height="170"></img>
             <form>
+                <br/>
                 <TextField
                     style={field}
                     id="outlined-helperText"
                     label="First Name"
                     defaultValue=""
+                    InputLabelProps ={{
+                       style: { fontWeight: 'bold'}
+                       
+                    }}
                     // helperText="Some important text"
                 />
                 <br/>
@@ -54,6 +74,9 @@ function Application(props) {
                     id="outlined-helperText"
                     label="Last Name"
                     defaultValue=""
+                    InputLabelProps ={{
+                        style: { fontWeight: 'bold'}
+                     }}
                     // helperText="Some important text"
                 />
                 <br/>
@@ -63,12 +86,27 @@ function Application(props) {
                     id="outlined-helperText"
                     label="Email"
                     defaultValue=""
+                    InputLabelProps ={{
+                        style: { fontWeight: 'bold'}
+                     }}
+                    // helperText="Some important text"
+                />
+                <br/>
+
+                <TextField
+                    style={field}
+                    id="outlined-helperText"
+                    label="Address"
+                    defaultValue=""
+                    InputLabelProps ={{
+                        style: { fontWeight: 'bold'}
+                     }}
                     // helperText="Some important text"
                 />
                 <br/>
 
                 <FormControl style={field} sx={{ m: 1, minWidth: 120 }}>
-                    <InputLabel id="demo-simple-select-helper-label">Ethnicity</InputLabel>
+                    <InputLabel style={{fontWeight: 'bold'}} id="demo-simple-select-helper-label">Ethnicity</InputLabel>
                     <Select
                     labelId="demo-simple-select-helper-label"
                     id="demo-simple-select-helper"
@@ -88,12 +126,15 @@ function Application(props) {
                 <br/>
 
                 <FormControl style={field} sx={{ m: 1, minWidth: 120 }}>
-                    <InputLabel id="demo-simple-select-helper-label">Education</InputLabel>
+                    <InputLabel style={{fontWeight: 'bold'}} id="demo-simple-select-helper-label">Education</InputLabel>
                     <Select
                     labelId="demo-simple-select-helper-label"
                     id="demo-simple-select-helper"
                     value={age}
                     label="Education"
+                    InputLabelProps ={{
+                        style: { fontWeight: 'bold'}
+                     }}
                     onChange={handleChange}
                     >
                     <MenuItem value="">
@@ -108,12 +149,13 @@ function Application(props) {
                 <br/>
 
                 <FormControl style={field} sx={{ m: 1, minWidth: 120 }}>
-                    <InputLabel id="demo-simple-select-helper-label">Total Kids</InputLabel>
+                    <InputLabel id="demo-simple-select-helper-label" style={{fontWeight: 'bold'}} >Total Kids</InputLabel>
                     <Select
                     labelId="demo-simple-select-helper-label"
                     id="demo-simple-select-helper"
                     value={age}
                     label="Total Kids"
+                    
                     onChange={handleChange}
                     >
                     <MenuItem value="">

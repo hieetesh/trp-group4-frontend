@@ -3,17 +3,45 @@ import { Button } from '@mui/material';
 import React from 'react';
 import '../Home.css';
 
+
+
 function home(props) {
+
+    const handleClickCollapse = () => {
+        var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+    }
+
     return (
         <div>
-
+            
             <div class='row head'>
                 <div className="col-9 headtext">
-                    <p>Reading</p>
+                <img src="/images/logohome.png" alt="logo" />
                 </div>
                 <div className="col-3 headright">
                     <button class="button headbtn">Login</button>
                 </div>
+            </div>
+
+            <div className="row">
+                <div className="col-12 headhomesec">
+                <h3>"Today a reader, tomorrow a leader" - Margaret Fuller</h3>
+                <button class="button headhomebtn">Register Now</button>
+                </div>
+            
             </div>
 
             <div className="div">
@@ -39,14 +67,38 @@ function home(props) {
             
 
                 <div className="row imgtext">
-                    <div className="col-4">
+                    <div className="col-4 imgdesc">
                         <h2>Books</h2>
+                        <button type="button" class="collapsible" onClick={()=>  {handleClickCollapse()}}>Inspire a lifetime of reading and nurture a love for learning with our wide selection of books.</button>
+                        <div class="content">
+                            <p>At the beach</p>
+                            <p>In the Tub</p>
+                            <p>Tasha goes to school</p>
+                            <p>To the Moon</p>   
+                        </div>
                     </div>
-                    <div className="col-4">
+                    <div className="col-4 imgdesc">
                         <h2>Videos</h2>
+                        <button type="button" class="collapsible" onClick={()=>  {handleClickCollapse()}}>Learn while having fun with our exhaustive library of videos.</button>
+                        <div class="content">
+                        <p>lesson-1-letter-sound</p>
+                        <p>lesson-2-letter-sound</p>
+                        <p>sight-words-lesson-1</p>
+                        <p>sound-words-1</p>
+                        <p>sound-words-2</p> 
+                        </div>
                     </div>
-                    <div className="col-4">
+                    <div className="col-4 imgdesc">
                         <h2>Games</h2>
+                        <button type="button" class="collapsible" onClick={()=>  {handleClickCollapse()}}>Delve into the world of fun and adventure while learning with our interactive games..</button>
+                        <div class="content">
+
+                            <p>sight-word-bingo</p>
+                            <p>sentence-strip</p>
+                            <p>sentence-strips-sight</p>
+                            <p>photophonics-mastdesh</p>
+                            <p>missing-letter-picture-cards</p>
+                        </div>
                     </div>
                 </div>
 
@@ -125,7 +177,7 @@ function home(props) {
                         <h3>
                             In the final level, you are too close to finish line. You have to clear a test to win a Trophy.
                         </h3>
-                        <button className="stepbtn"><a href="#"><span>Let's Begin the Race</span></a></button>
+                        <button className="stepbtn"><a href="./login.jsx"><span>Let's Begin the Race</span></a></button>
                     </div>
 
                 </div>
@@ -133,15 +185,22 @@ function home(props) {
 
             </div>
 
-        
+            <div className="row footertext">
+            <p>&copy; 2021 | Team 4 | All Rights Reserved</p>
+            </div>
+
+ 
 
             
 
             </div>
+            
 
 
     
     );
+
 }
+
 
 export default home;
